@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte de Balanza Grupo Ramos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      margin: 0;
+      padding: 20px;
+    }
+    .form-container {
+      background-color: #ffffff;
+      max-width: 600px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    body.loaded .form-container {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .logo {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: block;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .header-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-text h2 {
+      color: #2e7d32;
+      margin: 0;
+    }
+    .header-text h3 {
+      color: #2e7d32;
+      margin: 0;
+      font-weight: normal;
+      font-size: 18px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      text-align: left;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid #999;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      margin-top: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    button:hover {
+      background-color: #1b5e20;
+      transform: scale(1.05);
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #2e7d32;
+      box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+      transition: all 0.3s ease;
+    }
+    .choices__list--dropdown .choices__item {
+      font-size: 16px;
+      padding: 10px;
+    }
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 20px 15px;
+      }
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-text h2 {
+        font-size: 22px;
+      }
+      .header-text h3 {
+        font-size: 16px;
+      }
+      input, select, textarea, button {
+        font-size: 15px;
+        padding: 10px;
+      }
+      .choices__inner {
+        font-size: 15px;
+        padding: 10px;
+      }
+      .choices__list--dropdown .choices__item {
+        font-size: 15px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="header">
+      <img src="img.png" alt="Gus Comercial" class="logo">
+      <div class="header-text">
+        <h2>Reporte de Balanza</h2>
+        <h3>Grupo Ramos</h3>
+      </div>
+    </div>
+
+    <form action="https://script.google.com/macros/s/AKfycbz2C_sPScSAj1ABZ3iNh46TIItKDyQlNGInXKoIa0Oj5pqKMiteQxDVd7iJFmSrjxS_/exec" method="post">
+      <label>Sucursal:</label>
+      <select name="sucursal" required>
+        <option value="">Selecciona tu sucursal...</option>
+        <option value="A001 APREZIO LOS ALCARRIZOS">A001 APREZIO LOS ALCARRIZOS</option>
+<option value="A002 APREZIO MENDOZA">A002 APREZIO MENDOZA</option>
+<option value="A003 APREZIO SABANA PERDIDA">A003 APREZIO SABANA PERDIDA</option>
+<option value="A004 APREZIO VILLA MELLA">A004 APREZIO VILLA MELLA</option>
+<option value="A005 APREZIO VILLA DUARTE">A005 APREZIO VILLA DUARTE</option>
+<option value="A006 APREZIO MAMEYES">A006 APREZIO MAMEYES</option>
+<option value="A007 APREZIO ENSANCHE ESPAILLAT">A007 APREZIO ENSANCHE ESPAILLAT</option>
+<option value="A008 APREZIO BOCA CHICA">A008 APREZIO BOCA CHICA</option>
+<option value="A009 APREZIO GUARICANO">A009 APREZIO GUARICANO</option>
+<option value="A010 APREZIO ENGOMBE">A010 APREZIO ENGOMBE</option>
+<option value="A012 APREZIO HERMANAS MIRABAL">A012 APREZIO HERMANAS MIRABAL</option>
+<option value="A013 APREZIO PANTOJA">A013 APREZIO PANTOJA</option>
+<option value="A014 APREZIO OVANDO">A014 APREZIO OVANDO</option>
+<option value="A015 APREZIO ZONA FRANCA">A015 APREZIO ZONA FRANCA</option>
+<option value="A016 APREZIO VILLA JUANA">A016 APREZIO VILLA JUANA</option>
+<option value="A018 APREZIO PADRE CASTELLANOS">A018 APREZIO PADRE CASTELLANOS</option>
+<option value="A019 APREZIO BAYONA">A019 APREZIO BAYONA</option>
+<option value="A020 APREZIO LOS REYES">A020 APREZIO LOS REYES</option>
+<option value="A021 APREZIO LA TORONJA">A021 APREZIO LA TORONJA</option>
+<option value="A022 APREZIO LOS TRES BRAZOS">A022 APREZIO LOS TRES BRAZOS</option>
+<option value="A024 APREZIO MANDINGA">A024 APREZIO MANDINGA</option>
+<option value="A025 APREZIO CIENFUEGO">A025 APREZIO CIENFUEGO</option>
+<option value="A026 APREZIO ENSANCHE ISABELITA">A026 APREZIO ENSANCHE ISABELITA</option>
+<option value="A027 APREZIO LOS MINA SUR">A027 APREZIO LOS MINA SUR</option>
+<option value="A028 APREZIO SALOME URENA">A028 APREZIO SALOME URENA</option>
+<option value="A029 APREZIO VILLA FARO">A029 APREZIO VILLA FARO</option>
+<option value="A030 APREZIO LOS GIRASOLES">A030 APREZIO LOS GIRASOLES</option>
+<option value="A031 APREZIO INVIVIENDA">A031 APREZIO INVIVIENDA</option>
+<option value="A032 APREZIO VILLA ROSA">A032 APREZIO VILLA ROSA</option>
+<option value="A033 APREZIO BUENOS AIRES DE HERRER">A033 APREZIO BUENOS AIRES DE HERRER</option>
+<option value="A034 APREZIO CHARLES DE GAULLE">A034 APREZIO CHARLES DE GAULLE</option>
+<option value="A035 APREZIO SAN JOSE DE MENDOZA">A035 APREZIO SAN JOSE DE MENDOZA</option>
+<option value="A036 APREZIO LA VICTORIA">A036 APREZIO LA VICTORIA</option>
+<option value="GA01 GRAN APREZIO COTUI">GA01 GRAN APREZIO COTUI</option>
+<option value="LS01 SIRENA AVENIDA MELLA">LS01 SIRENA AVENIDA MELLA</option>
+<option value="MC01 Sirena Churchill">MC01 Sirena Churchill</option>
+<option value="MC02 Sirena Bartolomé Colón">MC02 Sirena Bartolomé Colón</option>
+<option value="MC03 Sirena Charles Gaulle">MC03 Sirena Charles Gaulle</option>
+<option value="MC04 SIRENA SAN FRANCISCO DE MACORIS">MC04 SIRENA SAN FRANCISCO DE MACORIS</option>
+<option value="MC05 SIRENA AUTOPISTA DUARTE">MC05 SIRENA AUTOPISTA DUARTE</option>
+<option value="MC06 SIRENA VILLA MELLA">MC06 SIRENA VILLA MELLA</option>
+<option value="MC07 Sirena San Isidro">MC07 Sirena San Isidro</option>
+<option value="MC08 SIRENA INDEPENDENCIA">MC08 SIRENA INDEPENDENCIA</option>
+<option value="MC09 SIRENA SAN CRISTOBAL">MC09 SIRENA SAN CRISTOBAL</option>
+<option value="MC12 SIRENA LA VEGA">MC12 SIRENA LA VEGA</option>
+<option value="MC13 Sirena Luperon">MC13 Sirena Luperon</option>
+<option value="MC14 Sirena el Embrujo">MC14 Sirena el Embrujo</option>
+<option value="MC21 SIRENA ROMANA">MC21 SIRENA ROMANA</option>
+<option value="MC23 SIRENA LOS ALCARRIZOS">MC23 SIRENA LOS ALCARRIZOS</option>
+<option value="MC24 Sirena Barahora">MC24 Sirena Barahora</option>
+<option value="MC25 Sirena Av. Estrella Sadhalá">MC25 Sirena Av. Estrella Sadhalá</option>
+<option value="SP01 SIRENA MARKET SARASOTA">SP01 SIRENA MARKET SARASOTA</option>
+<option value="SP02 SIRENA MARKET LOPE DE VEGA">SP02 SIRENA MARKET LOPE DE VEGA</option>
+<option value="SP09 Sirena Market Patio Colombia">SP09 Sirena Market Patio Colombia</option>
+<option value="SP10 Sirena Market Cuadra">SP10 Sirena Market Cuadra</option>
+<option value="Sirena Market Colinas Center">Sirena Market Colinas Center</option>
+      </select>
+
+      <label>Numero de Serie:</label>
+      <input type="text" name="numero_serie" required>
+
+      <label>Departamento o Ubicación:</label>
+      <input type="text" name="departamento_ubicacion" required>
+
+      <label>Falla del equipo:</label>
+      <textarea name="falla_equipo" required></textarea>
+
+      <label>Persona que reporta:</label>
+      <input type="text" name="persona_reporta" required>
+
+      <label>Persona que recibirá al técnico:</label>
+      <input type="text" name="persona_recibe" required>
+
+      <label>Numero de Teléfono:</label>
+      <input type="tel" name="telefono" required pattern="\d{10}" title="Debe ingresar un número de teléfono de 10 dígitos" placeholder="8091234567">
+
+      <label>Correo Electrónico:</label>
+      <input type="email" name="correo_electronico" required pattern="^[a-zA-Z0-9._%+-]+@gruporamos\.com$" title="Debe ser un correo que termine en @gruporamos.com" placeholder="usuario@gruporamos.com">
+
+      <button type="submit">🚀 <span style="margin-left: 5px;">Enviar</span></button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.classList.add('loaded');
+
+      const selectSucursal = document.querySelector('select[name="sucursal"]');
+      const choices = new Choices(selectSucursal, {
+        searchEnabled: true,
+        itemSelectText: '',
+        placeholderValue: 'Buscar sucursal...',
+        searchPlaceholderValue: 'Buscar...',
+        shouldSort: false
+      });
+
+      const form = document.querySelector('form');
+      const button = form.querySelector('button');
+
+      form.addEventListener('submit', function () {
+        button.disabled = true;
+        button.innerHTML = '⏳ <span style="margin-left: 5px;">Enviando...</span>';
+      });
+    });
+  </script>
+</body>
+</html>
+
