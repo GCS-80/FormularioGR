@@ -123,7 +123,7 @@
       </div>
     </div>
 
-    <form id="formulario">
+    <form action="https://script.google.com/macros/s/AKfycbxjJCVSgojLqadwzajrlmFYFc8XrKpKp_a_9TQQAzTeVSAg72x6ccczZxzdhleydxIm/exec" method="post">
       <label>Sucursal:</label>
       <select name="sucursal" required>
         <option value="">Selecciona tu sucursal...</option>
@@ -182,7 +182,7 @@
 <option value="SP02 SIRENA MARKET LOPE DE VEGA">SP02 SIRENA MARKET LOPE DE VEGA</option>
 <option value="SP09 Sirena Market Patio Colombia">SP09 Sirena Market Patio Colombia</option>
 <option value="SP10 Sirena Market Cuadra">SP10 Sirena Market Cuadra</option>
-<option value="Sirena Market Colinas Center">Sirena Market Colinas Center</option>!-- Aquí van las opciones de sucursales -->
+<option value="Sirena Market Colinas Center">Sirena Market Colinas Center</option
       </select>
 
       <label>Numero de Serie:</label>
@@ -201,7 +201,7 @@
       <input type="text" name="persona_recibe" required>
 
       <label>Numero de Teléfono:</label>
-     <input type="tel" name="telefono" required pattern="[0-9]{10}" title="Debe ingresar un número de teléfono de 10 dígitos" placeholder="8091234567">
+      <input type="tel" name="telefono" required pattern="[0-9]{10}" title="Debe ingresar un número de teléfono de 10 dígitos" placeholder="8091234567">
 
       <label>Correo Electrónico:</label>
       <input type="email" name="correo_electronico" required pattern="^[a-zA-Z0-9._%+-]+@gruporamos\\.com$" title="Debe ser un correo que termine en @gruporamos.com" placeholder="usuario@gruporamos.com">
@@ -215,59 +215,13 @@
     document.addEventListener('DOMContentLoaded', function () {
       document.body.classList.add('loaded');
 
-      const form = document.getElementById('formulario');
-      const button = form.querySelector('button');
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxjJCVSgojLqadwzajrlmFYFc8XrKpKp_a_9TQQAzTeVSAg72x6ccczZxzdhleydxIm/exec';
-      const redirectUrl = 'https://gcs-80.github.io/FormularioGR/';
-      const redirectDelay = 3000; // 3 segundos
-
       const selectSucursal = document.querySelector('select[name="sucursal"]');
-      const choices = new Choices(selectSucursal, {
+      new Choices(selectSucursal, {
         searchEnabled: true,
         itemSelectText: '',
         placeholderValue: 'Buscar sucursal...',
         searchPlaceholderValue: 'Buscar...',
         shouldSort: false
-      });
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        
-        button.disabled = true;
-        button.innerHTML = '⏳ <span style="margin-left: 5px;">Enviando...</span>';
-
-        const formData = new FormData(form);
-
-        fetch(scriptURL, {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.text())
-        .then(result => {
-          console.log('Success!', result);
-          document.body.innerHTML = `
-            <div style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
-              <h2>✅ Formulario enviado exitosamente</h2>
-              <div style="margin: 30px auto; width: 50px; height: 50px; border: 5px solid #ccc; border-top-color: #2e7d32; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-              <p>Redirigiendo en ${redirectDelay / 1000} segundos...</p>
-              <p><a href="${redirectUrl}" style="color: #2e7d32; font-weight: bold;">Haz clic aquí si no eres redirigido automáticamente</a></p>
-            </div>
-            <style>
-              @keyframes spin {
-                to { transform: rotate(360deg); }
-              }
-            </style>
-          `;
-          setTimeout(() => {
-            window.location.href = redirectUrl;
-          }, redirectDelay);
-        })
-        .catch(error => {
-          console.error('Error!', error.message);
-          alert('❌ Hubo un problema al enviar el formulario. Intenta nuevamente.');
-          button.disabled = false;
-          button.innerHTML = '🚀 <span style="margin-left: 5px;">Enviar</span>';
-        });
       });
     });
   </script>
